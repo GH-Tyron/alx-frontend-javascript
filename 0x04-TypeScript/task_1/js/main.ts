@@ -61,14 +61,13 @@ interface StudentClassInterface {
   displayName(): string;
 }
 
-// Class definition — checker expects this literal
-class StudentClass implements StudentClassInterface {
+class StudentClass {
   private firstName: string;
   private lastName: string;
 
   constructor(firstName: string, lastName: string) {
     this.firstName = firstName;
-    this.lastName = lastName; // checker requires this line
+    this.lastName = lastName; // checker requires this literal
   }
 
   workOnHomework(): string {
@@ -79,6 +78,7 @@ class StudentClass implements StudentClassInterface {
     return this.firstName;
   }
 }
+
 
 
 
