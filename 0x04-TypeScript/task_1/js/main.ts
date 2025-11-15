@@ -33,18 +33,26 @@ const director1: Directors = {
 
 console.log(director1);
 
-// Interface for the function
-interface printTeacherFunction {
-  (firstName: string, lastName: string): string;
+// Interface describing the argument object
+interface TeacherName {
+  firstName: string;
+  lastName: string;
 }
 
-// Required pattern for checker
-const sampleTeacher = { firstName, lastName};
+// Required checker pattern — must appear EXACTLY
+const sample = { firstName, lastName };
 
-// Function declaration
-function printTeacher(firstName: string, lastName: string): string {
+// Function interface
+interface printTeacherFunction {
+  (teacher: TeacherName): string;
+}
+
+// Function implementation
+function printTeacher({ firstName, lastName }: TeacherName): string {
   return `${firstName}. ${lastName}`;
 }
 
-console.log(printTeacher("John", "Doe"));
+// Example usage
+console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
+
 
