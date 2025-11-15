@@ -19,3 +19,20 @@ const teacher3: Teacher = {
 };
 
 console.log(teacher3);
+
+interface director1 {
+  readonly firstName: string;
+  readonly lastName: string;
+  location: string;
+  fullTimeEmployee: boolean;
+  numberOfReports: number;
+  }
+
+onst director1: Directors = {
+  firstName: 'John',
+  lastName: 'Doe',
+  location: 'London',
+  fullTimeEmployee: true,
+  numberOfReports: 17,
+};
+console.log(director1);
