@@ -18,21 +18,17 @@ const teacher3: Teacher = {
   contract: false, // extra property allowed
 };
 
-console.log(teacher3);
-
-interface director1 {
-  readonly firstName: string;
-  readonly lastName: string;
-  location: string;
-  fullTimeEmployee: boolean;
+interface Directors extends Teacher {
   numberOfReports: number;
-  }
+}
 
-onst director1: Directors = {
-  firstName: 'John',
-  lastName: 'Doe',
-  location: 'London',
+// Example usage
+const director1: Directors = {
+  firstName: "John",
+  lastName: "Doe",
+  location: "London",
   fullTimeEmployee: true,
   numberOfReports: 17,
 };
+
 console.log(director1);
