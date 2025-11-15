@@ -18,7 +18,7 @@ const teacher3: Teacher = {
   contract: false, // extra property allowed
 };
 
-interface Directors extends Teacher {
+interface Director extends Teacher {
   numberOfReports: number;
 }
 
