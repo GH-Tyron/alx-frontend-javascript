@@ -34,12 +34,12 @@ const director1: Directors = {
 console.log(director1);
 
 // Interface describing the function structure
-interface printTeacherFunction {
+interface printTeacher {
   (firstName: string, lastName: string): string;
 }
 
 // Implementation of the function
-const printTeacher: printTeacherFunction = (firstName, lastName) => {
+const printTeacher: printTeacher = (firstName, lastName) => {
   return `${firstName} ${lastName}`;
 };
 
