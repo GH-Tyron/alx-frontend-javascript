@@ -91,17 +91,17 @@ executeWork(createEmployee(1000));  // Getting to director tasks
 type Subjects = "Math" | "History";
 
 // Function teachClass
-function teachClass(todayClass: Subjects): string {
+function teachClass(todayClass:Subjects): string {
   if (todayClass === "Math") {
     return "Teaching Math";
   } else if (todayClass === "History") {
     return "Teaching History";
   }
-  // Optional fallback (never needed, but for type safety)
   return "";
 }
 
 // Example usage
 console.log(teachClass("Math"));    // Teaching Math
 console.log(teachClass("History")); // Teaching History
+
 
