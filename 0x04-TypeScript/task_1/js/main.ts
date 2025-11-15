@@ -1,9 +1,21 @@
+interface Teacher {
+  readonly firstName: string;          // cannot change after initialization
+  readonly lastName: string;           // cannot change after initialization
+  fullTimeEmployee: boolean;           // always required
+  yearsOfExperience?: number;          // optional
+  location: string;                    // always required
+
+  // Allow additional attributes like `contract: boolean`
+  [key: string]: any;
+}
+
+// Example usage:
 const teacher3: Teacher = {
-  firstName: 'John',
+  firstName: "John",
+  lastName: "Doe",
   fullTimeEmployee: false,
-  lastName: 'Doe',
-  location: 'London',
-  contract: false,
+  location: "London",
+  contract: false, // extra property allowed
 };
 
 console.log(teacher3);
