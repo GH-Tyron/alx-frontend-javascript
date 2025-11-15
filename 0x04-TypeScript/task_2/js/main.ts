@@ -51,22 +51,16 @@ class Teacher implements TeacherInterface {
 // ===============================
 
 function createEmployee(salary: number | string): Director | Teacher {
-  let numericSalary: number;
-
   if (typeof salary === "string") {
-    // Remove $ if present and convert to number
-    numericSalary = Number(salary.replace(/\$/g, ""));
-  } else {
-    numericSalary = salary;
+    salary = Number(salary.replace(/\$/g, ""));
   }
 
-  if (numericSalary < 500) {
+  if (salary < 500) {
     return new Teacher();
   } else {
     return new Director();
   }
 }
-
 // ===============================
 // 4. Example usage
 // ===============================
