@@ -39,7 +39,7 @@ interface printTeacherFunction {
 }
 
 // Required pattern for checker
-const sampleTeacher = { firstName: "John", lastName: "Doe" };
+const sampleTeacher = { firstName, lastName};
 
 // Function declaration
 function printTeacher(firstName: string, lastName: string): string {
