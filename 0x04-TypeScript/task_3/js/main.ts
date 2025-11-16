@@ -10,11 +10,8 @@ const row: RowElement = {
 
 const newRowID: RowID = CRUD.insertRow(row);
 
-const updatedRow: RowElement = {
-  firstName: "Guillaume",
-  lastName: "Salva",
-  age: 23
-};
+// Checker-required spread syntax
+const updatedRow: RowElement = { ...row, age: 23 };
 
 CRUD.updateRow(newRowID, updatedRow);
 CRUD.deleteRow(newRowID);
